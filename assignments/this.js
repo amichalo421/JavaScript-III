@@ -113,4 +113,3 @@
         const languages = ['English', 'Polish', 'Spanish', 'French']
         // greet.call(user, languages[0], languages[1], languages[2], languages[3]);
         greet.apply(user, languages);
-

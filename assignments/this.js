@@ -30,6 +30,8 @@
         }
         var luckyhorse = 'Seabiscit' ;
         myFunction(); 
+    //4. Another ex.:
+        // console.log(this);
 
 
 // +++Principle 2+++ // Implicit Binding ex.
@@ -57,6 +59,16 @@
             red:red,
         };
         obj.red();
+    //3. Another ex.: 
+        // const usa = {
+        //     city: 'Las Vegas',
+        //     state: 'Nevada',
+        //     speak: function() {
+        //     return `${this.city} is a city in ${this.state}`;
+        //     }
+        // }
+        
+        // console.log(usa.speak());
 
 // +++Principle 3+++ // New Binding ex.
 
@@ -94,6 +106,22 @@
 
         const me = new User('Andre', 27);
         console.log(me);
+    //3. Another ex.:
+        // function UsaState(attributes) {
+        //     this.city = attributes.city;
+        //     this.state = attributes.state;
+        // }
+        
+        // UsaState.prototype.doStuff = function(adjective ="nice") {
+        //     console.log(`${this.city} is a ${adjective} city in ${this.state}`);
+        // }
+        
+        // const newUsaState = new UsaState({
+        //     city: 'San Francisco',
+        //     state: 'California'
+        // });
+        
+        // newUsaState.doStuff('fun');
 
 
 // +++Principle 4+++ // Explicit Binding ex. 
@@ -112,4 +140,13 @@
 
         const languages = ['English', 'Polish', 'Spanish', 'French']
         // greet.call(user, languages[0], languages[1], languages[2], languages[3]);
-        greet.apply(user, languages);
+        // greet.apply(user, languages);
+
+    //3. Another ex.:
+        // const sanDiego = new UsaState({
+        //     city: 'San Diego',
+        //     state: 'California'
+        // });
+        
+        // sanDiego.doStuff.apply(newUsaState);
+        // sanDiego.doStuff('fun')
